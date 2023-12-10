@@ -1,0 +1,27 @@
+:root {
+    --primary : #c93b3b;
+    --bg: #010101;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.4rem 7%;
+}
