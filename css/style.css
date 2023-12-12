@@ -17,7 +17,7 @@ body {
     font-family: 'poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
-    /* min-height: 2000px; */
+    min-height: 3000px;
 }
 
 /* navbar */
@@ -158,14 +158,16 @@ body {
 }
 
 .about h2,
-.menu h2 {
+.menu h2,
+.kontak h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.kontak h2 span {
     color: var(--primary);
 }
 
@@ -208,7 +210,8 @@ body {
     margin-bottom: 1rem;
 }
 
-.menu p {
+.menu p,
+.kontak p {
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.4;
@@ -220,7 +223,7 @@ body {
 }
 
 .menu {
-    padding: 6.5rem 7%;
+    padding: 7rem 7%;
 }
 
 .menu .row {
@@ -246,6 +249,66 @@ body {
 }
 
 
+/* kontak */
+
+.kontak {
+    padding: 7rem 7%;
+}
+
+.kontak h2 {
+    margin-bottom: 1rem;
+}
+
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+}
+
+.kontak .row .maps {
+    margin: 1rem;
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.kontak .row form {
+    flex: 1 1 45rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.kontak .row form .input-grup {
+    display: flex;
+    /* flex-direction: row;
+    text-align: start; */
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+    border-radius: 2px;
+}
+
+
+.kontak .row form .input-grup input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+    background: none;
+    color: #fff;
+
+}
+
+.kontak .row form .btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1,6rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
 
 
 
@@ -334,6 +397,10 @@ body {
     .menu p {
         font-size: 1.3rem;
     }
+
+    /* .kontak .row {
+        flex-wrap: wrap;
+    } */
 }
 
 /* mobile */
