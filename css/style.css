@@ -3,21 +3,21 @@
     --bg: #010101;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     text-decoration: none;
-    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
-    min-height: 3000px;
 }
 
 /* navbar */
@@ -280,8 +280,8 @@ body {
 
 .kontak .row form .input-grup {
     display: flex;
-    /* flex-direction: row;
-    text-align: start; */
+    flex-direction: row;
+    text-align: start;
     align-items: center;
     margin-top: 1rem;
     background-color: var(--bg);
@@ -300,6 +300,10 @@ body {
 
 }
 
+.kontak .row form .input-grup i {
+    padding: 0;
+}
+
 .kontak .row form .btn {
     margin-top: 1.5rem;
     display: inline-block;
@@ -307,10 +311,50 @@ body {
     font-size: 1,6rem;
     color: #fff;
     background-color: var(--primary);
-    border-radius: 2px;
+    cursor: pointer;
 }
 
+/* footer */
 
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+}
+
+footer .sosials {
+    padding: 1rem 0;
+}
+
+footer .sosials a {
+    margin: 1rem;
+}
+
+footer .sosials a:hover,
+footer .links a:hover,
+footer .credit a:hover {
+    color: var(--primary);
+}
+
+,footer .links {
+    margin-bottom: 1rem;
+
+}
+
+footer .links a {
+    color: #fff;
+    padding: .7rem 1rem;
+
+}
+
+footer .credit {
+    font-size: .8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+}
 
 
 
@@ -398,9 +442,14 @@ body {
         font-size: 1.3rem;
     }
 
-    /* .kontak .row {
+    .kontak .row {
         flex-wrap: wrap;
-    } */
+    }
+
+    .kontak .row .maps {
+        height: 30rem;
+        padding: .5rem;
+    }
 }
 
 /* mobile */
