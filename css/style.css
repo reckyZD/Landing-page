@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 1);
     border-bottom: 1px solid #fff;
     position: fixed;
     top: 0;
@@ -55,6 +55,7 @@ body {
 .navbar .navbar-nav i {
     margin: 10px;
 }
+
 
 .navbar .navbar-nav a:hover {
     color: var(--primary);
@@ -90,6 +91,55 @@ body {
 #hamburger-menu {
     display: none;
 }
+
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 50rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.8s;
+}
+
+.navbar .search-box {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+  }
+  
+  .navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+  }
+  
+  .navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+  }
 
 /* hero section */
 
@@ -337,7 +387,7 @@ footer .credit a:hover {
     color: var(--primary);
 }
 
-,footer .links {
+.footer .links {
     margin-bottom: 1rem;
 
 }
