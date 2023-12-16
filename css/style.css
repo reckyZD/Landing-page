@@ -1,5 +1,5 @@
 :root {
-    --primary : #c93b3b;
+    --primary : #b6895b;
     --bg: #010101;
 }
 
@@ -11,6 +11,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    border: none;
     text-decoration: none;
 }
 
@@ -26,8 +27,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(250, 235, 215, 1);
-    border-bottom: 1px solid #fff;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #513c28;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,15 +39,16 @@ body {
 .navbar .navbar-logo {
     font-size: 2rem;
     font-weight: 700;
-    color: #8c7851;
+    color: #eee;
 }
 
 .navbar .navbar-logo span {
+    font-style: italic;
     color: var(--primary);
 }
 
 .navbar .navbar-nav a {
-    color: #8c7851;
+    color: #eee;
     display: inline-block;
     margin: 0 1rem;
     font-size: 1.4rem;
@@ -167,6 +169,9 @@ body {
 .hero .content {
     padding: 1.4rem 7%;
     max-width: 60rem;
+    /* text-align: center;
+    position: fixed;
+    top: 130px; */
 }
 
 .hero .content h1 {
@@ -302,7 +307,201 @@ body {
     margin: 1rem auto .5rem;
 }
 
+/* produk */
+.produk .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+}
 
+.produk .produk-card {
+    text-align: center;
+    border: 1px solid #222;
+    padding: 1rem;
+}
+
+.produk .produk-icons {
+    display: flex;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.produk .produk-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: .3rem;
+    border: 1px solid #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produk .produk-icons a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    /* transform: scaleY(.5); */
+}
+
+.produk .produk-image {
+    height: 25rem;
+    margin: .5rem auto;
+}
+
+.produk .produk-content h3 {
+    font-size: 2rem;
+}
+
+.produk .produk-stars {
+    color: var(--primary);
+    padding: .3rem;
+}
+
+.produk .produk-stars .star-full,
+.modal .product-stars .star-full {
+    fill: var(--primary);
+}
+
+.produk .produk-price {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.produk .produk-price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+/* shopping-cart */
+.shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 30rem;
+    padding: 0 1.3rem;
+    background-color: #eee;
+    color: var(--primary);
+    transition: .8s;
+}
+
+.shopping-cart.active {
+    right: 0;
+}
+
+.shopping-cart .cart-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #222;
+    position: relative;
+}
+
+.shopping-cart img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.shopping-cart h3 {
+    font-size: 1.6rem;
+    padding-bottom: .5rem;
+    color: var(--bg);
+}
+
+.shopping-cart .item-price {
+    font-size: 1.2rem;
+    color: var(--bg);
+}
+
+.shopping-cart .remove-item {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--bg);
+}
+
+.shopping-cart .remove-item:hover {
+    color: var(--primary);
+}
+
+
+/* modal */
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bg);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    height: fit-content;
+    animation: animateModal 0.5s;
+}
+  
+/* Modal Animation */
+@keyframes animateModal {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+.modal-container .close-icon {
+    position: absolute;
+    right: 1rem;
+}
+  
+.modal-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.modal-content img {
+    max-height: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+  
+.modal-content p {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+}
+  
+.modal-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 13rem;
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+}
+  
 /* kontak */
 
 .kontak {
@@ -335,7 +534,7 @@ body {
 .kontak .row form .input-grup {
     display: flex;
     flex-direction: row;
-    text-align: start;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
     background-color: var(--bg);
@@ -409,16 +608,6 @@ footer .credit {
 footer .credit a {
     color: var(--bg);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -509,8 +698,11 @@ footer .credit a {
         height: 30rem;
         padding: .5rem;
     }
-
-
+    .modal-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* mobile */

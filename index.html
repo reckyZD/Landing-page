@@ -13,7 +13,7 @@
 <body>
 <!-- navbar -->
   <nav class="navbar">
-    <a href="#" class="navbar-logo">Kenangan<span>Galau</span>.</a>
+    <a href="#" class="navbar-logo">Kenangan<span>Galau</span></a>
 
     <div class="navbar-nav">
       <a href="#home"><i class="fa-sharp fa-solid fa-house"></i>Home</a>
@@ -24,8 +24,8 @@
     </div>
 
     <div class="navbar-extra">
-      <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></a>
-      <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
+      <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl" style='color: #eeeeee;'></i></a>
+      <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i></a>
       <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
     <!-- search -->
@@ -34,6 +34,18 @@
         <label for="search-box"><i class="fa-solid fa-magnifying-glass"></i></label>
     </div>
 <!-- search end -->
+<!-- shopping-cart -->
+<div class="shopping-cart">
+    <div class="cart-item">
+        <img src="img/kolase love.png" alt="kolase">
+        <div class="item-detail">
+            <h3>Kolase</h3>
+            <div class="item-price">IDR 30K</div>
+        </div>
+        <i data-feather="trash-2" class='remove-item'></i>
+    </div>
+</div>
+<!-- shopping-cart end -->
 </nav>
 <!-- navbar end -->
 
@@ -104,8 +116,8 @@
     <div class="row">
         <div class="produk-card">
             <div class="produk-icons">
-                <a href="#"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
-                <a href="#" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="#shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
             </div>
             <div class="produk-image">
                 <img src="img/kolase love.png" alt="kolase">
@@ -113,11 +125,11 @@
             <div class="produk-content">
                 <h3>Kolase foto</h3>
                 <div class="produk-stars">
-                    <i class="fa-regular fa-star fa-xl" style="color: #ffffff;"></i>
-                    <i class="fa-regular fa-star fa-xl" style="color: #ffffff;"></i>
-                    <i class="fa-regular fa-star fa-xl" style="color: #ffffff;"></i>
-                    <i class="fa-regular fa-star fa-xl" style="color: #ffffff;"></i>
-                    <i class="fa-regular fa-star fa-xl" style="color: #ffffff;"></i>
+                    <i data-feather="star" class='star-full'></i>
+                    <i data-feather="star" class='star-full'></i>
+                    <i data-feather="star" class='star-full'></i>
+                    <i data-feather="star" class='star-full'></i>
+                    <i data-feather="star" class='star-full'></i>
                 </div>
                 <div class="produk-price">IDR 15.000 <span>IDR 30.000K</span></div>
             </div>
@@ -175,18 +187,30 @@
 </footer>
 <!-- footer end -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- modal -->
+<div class="modal" id="item-detail-modal">
+    <div class="modal-container">
+      <a href="#item-detail-modal" class="close-icon"><i class="fa-regular fa-rectangle-xmark fa-2xl" style="color: #010101;"></i></a>
+      <div class="modal-content">
+        <img src="img/kolase love.png" alt="kolase">
+        <div class="product-content">
+          <h3>Kolase foto</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, tenetur cupiditate facilis obcaecati
+            ullam maiores minima quos perspiciatis similique itaque, esse rerum eius repellendus voluptatibus!</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+          <a href="#shopping-cart-button"><i class='fa-solid fa-cart-shopping fa-2xl' style="color: #ffffff;"></i><span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- modal end -->
 
 
     <script>
