@@ -95,9 +95,8 @@ body {
 .navbar .search-form {
     position: absolute;
     top: 100%;
-    right: 7%;
-    background-color: #fff;
-    border-radius: 3px;
+    right: 9%;
+    background-color: rgba(255, 255, 255, .5);
     width: 50rem;
     height: 3.5rem;
     display: flex;
@@ -108,8 +107,8 @@ body {
 }
 
 .navbar .search-box {
-    height: 100%;
     width: 100%;
+    height: 100%;
     font-size: 1.6rem;
     color: var(--bg);
     padding: 1rem;
@@ -126,20 +125,21 @@ body {
     transform: scaleY(1);
   }
   
-  .navbar .search-form input {
+.navbar .search-form input {
     height: 100%;
     width: 100%;
     font-size: 1.6rem;
     color: var(--bg);
     padding: 1rem;
-  }
+    margin-top: 0.2rem;
+}
   
-  .navbar .search-form label {
+.navbar .search-form label {
     cursor: pointer;
-    font-size: 2rem;
-    margin-right: 1.5rem;
+    font-size: 1.6rem;
+    margin-left: 1rem;
     color: var(--bg);
-  }
+}
 
 /* hero section */
 
@@ -209,6 +209,7 @@ body {
 
 .about h2,
 .menu h2,
+.produk h2,
 .kontak h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -217,6 +218,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.produk h2 span,
 .kontak h2 span {
     color: var(--primary);
 }
@@ -261,7 +263,8 @@ body {
 }
 
 .menu p,
-.kontak p {
+.kontak p,
+.produk p {
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.4;
@@ -272,7 +275,8 @@ body {
     line-height: 1.6;
 }
 
-.menu {
+.menu,
+.produk {
     padding: 7rem 7%;
 }
 
@@ -465,6 +469,11 @@ footer .credit a {
         transform: scaleX(.4);
     }
 
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
     .about .row {
         flex-wrap: wrap;
     }
@@ -500,6 +509,8 @@ footer .credit a {
         height: 30rem;
         padding: .5rem;
     }
+
+
 }
 
 /* mobile */
