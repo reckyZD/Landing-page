@@ -354,7 +354,7 @@ body {
 
 .produk .produk-image {
     height: 25rem;
-    margin: .5rem auto;
+    margin: .5rem 1rem;
 }
 
 .produk .produk-content h3 {
@@ -717,5 +717,14 @@ footer .credit a {
 @media (max-width:450px) {
     html {
         font-size: 55%;
+    }
+
+    #hambuger-menu {
+        display: inline-block;
+    }
+
+    .produk .produk-image {
+        height: auto;
+        margin: auto;
     }
 }

@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src='app/app.js'></script>
 </head>
 <body>
 <!-- navbar -->
@@ -109,21 +111,22 @@
 <!-- menu end -->
 
 <!-- produk -->
-<section class="produk" id="produk">
+<section class="produk" id="produk" x-data='produk'>
     <h2><span>Produk unggulan</span>Kami</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptate.</p>
 
     <div class="row">
-        <div class="produk-card">
+         <template x-for='(item, index) in items' x-key='index'>
+            <div class="produk-card">
             <div class="produk-icons">
                 <a href="#shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
                 <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
             </div>
             <div class="produk-image">
-                <img src="img/kolase love.png" alt="kolase">
+                <img :src="`img/${items.img}`" :alt="items.name">
             </div>
             <div class="produk-content">
-                <h3>Kolase foto</h3>
+                <h3>Cetak foto</h3>
                 <div class="produk-stars">
                     <i data-feather="star" class='star-full'></i>
                     <i data-feather="star" class='star-full'></i>
@@ -133,7 +136,8 @@
                 </div>
                 <div class="produk-price">IDR 15.000 <span>IDR 30.000K</span></div>
             </div>
-        </div>
+            </div>
+        </template>
     </div>
 </section>
 <!-- produk end -->
