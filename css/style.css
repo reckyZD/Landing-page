@@ -376,11 +376,11 @@ body {
     font-size: 1.4rem;
 }
 
-.produk .produk-price span {
+/* .produk .produk-price span {
     text-decoration: line-through;
     font-weight: lighter;
     font-size: 1rem;
-}
+} */
 
 /* shopping-cart */
 .shopping-cart {
@@ -718,7 +718,7 @@ footer .credit a {
     html {
         font-size: 55%;
     }
-
+/* 
     #hambuger-menu {
         display: inline-block;
     }
@@ -726,5 +726,5 @@ footer .credit a {
     .produk .produk-image {
         height: auto;
         margin: auto;
-    }
+    } */
 }

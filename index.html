@@ -116,25 +116,70 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptate.</p>
 
     <div class="row">
-         <template x-for='(item, index) in items' x-key='index'>
+         <template x-for="(item, index) in items" x-key="index">
             <div class="produk-card">
             <div class="produk-icons">
-                <a href="#shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
                 <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
             </div>
             <div class="produk-image">
-                <img :src="`img/${items.img}`" :alt="items.name">
+                <img :src="`img/${item.img}`" :alt="item.name">
             </div>
             <div class="produk-content">
-                <h3>Cetak foto</h3>
+                <h3 x-text='item.name'></h3>
                 <div class="produk-stars">
-                    <i data-feather="star" class='star-full'></i>
-                    <i data-feather="star" class='star-full'></i>
-                    <i data-feather="star" class='star-full'></i>
-                    <i data-feather="star" class='star-full'></i>
-                    <i data-feather="star" class='star-full'></i>
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <use href="img/feather-sprite.svg#star" />
+                    </svg>
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <use href="img/feather-sprite.svg#star" />
+                    </svg>
                 </div>
-                <div class="produk-price">IDR 15.000 <span>IDR 30.000K</span></div>
+                <div class="produk-price"><span x-text='rupiah(item.price)'></span></div>
             </div>
             </div>
         </template>

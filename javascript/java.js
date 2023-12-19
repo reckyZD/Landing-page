@@ -62,5 +62,6 @@ document.querySelector('.modal .close-icon').onclick = (e) => {
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
     itemDetailModal.style.display = 'none';
-  }
+    e.preventDefault();
+  };
 };
