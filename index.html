@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- navbar -->
-  <nav class="navbar">
+  <nav class="navbar" x-data>
     <a href="#" class="navbar-logo">Kenangan<span>Galau</span></a>
 
     <div class="navbar-nav">
@@ -27,7 +27,8 @@
 
     <div class="navbar-extra">
       <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl" style='color: #eeeeee;'></i></a>
-      <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i></a>
+      <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i>
+    <span class='quantity-badge' x-show='$store.cart.quantity' x-text='$store.cart.quantity'></span></a>
       <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
     </div>
     <!-- search -->
@@ -38,13 +39,39 @@
 <!-- search end -->
 <!-- shopping-cart -->
 <div class="shopping-cart">
+    <template x-for='(item, index) in $store.cart.items' x-key='index'>
     <div class="cart-item">
-        <img src="img/kolase love.png" alt="kolase">
+        <img :src="`img/${item.img}`" :alt="item.name">
         <div class="item-detail">
-            <h3>Kolase</h3>
-            <div class="item-price">IDR 30K</div>
+            <h3 x-text='item.name'></h3>
+            <div class="item.price" style='font-weight: bold; font-size: 1.rem; color: black;' >
+                <span x-text='rupiah(item.price)'></span> &times;
+                <button id='remove' @click='$store.cart.remove(item.id)'>&minus;</button>
+                <span x-text='item.quantity'></span>
+                <button id='add' @click='$store.cart.add(item)' >&plus;</button> &equals;
+                <span x-text='rupiah(item.total)'></span>
+            </div>
         </div>
-        <i data-feather="trash-2" class='remove-item'></i>
+    </div>
+    </template>
+    <h4 x-show='!$store.cart.items.length' style='margin-top: 1rem;'>Cart is Empty</h4>
+    <h4 x-show='$store.cart.items.length'>Total : <span x-text='$store.cart.total'></span></h4>
+    <!-- form customer -->
+    <div class="container-form">
+        <h5>customer Details</h5>
+        <label for="name" >
+            <span>Name</span>
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="email" >
+            <span>email</span>
+            <input type="email" name="email" id="email">
+        </label>
+        <label for="phone" >
+            <span>phone</span>
+            <input type="number" name="phone" id="phone" autocomplete='off'>
+        </label>
+        <button class="checkout-button" type='submit' id='checkout-button' value='checkout'>Buy Now</button>
     </div>
 </div>
 <!-- shopping-cart end -->
