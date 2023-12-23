@@ -17,7 +17,7 @@
   <nav class="navbar" x-data>
     <a href="#" class="navbar-logo">Kenangan<span>Galau</span></a>
 
-    <div class="navbar-nav">
+    <div class="navbar-nav" x-data="{ isMenuOpen: false }">
       <a href="#home"><i class="fa-sharp fa-solid fa-house"></i>Home</a>
       <a href="#about"><i class="fa-solid fa-people-roof"></i>Tentang Kami</a>
       <a href="#menu"><i class="fa-solid fa-mug-hot"></i>Menu</a>
@@ -29,7 +29,7 @@
       <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl" style='color: #eeeeee;'></i></a>
       <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i>
     <span class='quantity-badge' x-show='$store.cart.quantity' x-text='$store.cart.quantity'></span></a>
-      <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl"></i></a>
+      <a href="#" class='hamburger-menu' id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl" style='color: #eeeeee;'></i></a>
     </div>
     <!-- search -->
     <div class="search-form">

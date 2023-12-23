@@ -90,7 +90,7 @@ body {
     color: var(--primary);
 }
 
-#hamburger-menu {
+.hamburger-menu {
     display: none;
 }
 
@@ -323,18 +323,26 @@ body {
 }
 
 .produk .produk-card {
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    border: 1px solid #222;
+    border: 1px solid #eee;
     padding: 1rem;
 }
 
 .produk .produk-icons {
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     gap: .1rem;
 }
 
 .produk .produk-icons a {
+    position: absolute;
+    left: 90%;
+    right: 5%;
+    
     width: 4rem;
     height: 4rem;
     color: #fff;
@@ -352,8 +360,16 @@ body {
     /* transform: scaleY(.5); */
 }
 
+.produk .produk-image img {
+    position: absolute;
+    top: 2rem;
+    left: 8.3rem;
+    max-width: 300px;
+    max-height: 400px;
+}
+
 .produk .produk-image {
-    height: 25rem;
+    height: 21rem;
     margin: .5rem 1rem;
 }
 
