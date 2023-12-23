@@ -451,7 +451,7 @@ body {
 .shopping-cart h4 {
     font-size: 1.6rem;
     text-align: center;
-    margin-top: -.8rem;
+    margin-top: -.4rem;
 }
 
 /* .shopping-cart .item-price {
@@ -471,6 +471,51 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
 
+}
+
+/* form cust */
+.container-form  {
+    width: 100%;
+    border-top: 1px dashed black;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.container-form h5 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container-form label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.container-form span {
+    text-align: start;
+}
+
+.container-form input {
+    background-color: #222;
+    color: #eee;
+    padding: 5px;
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+.container-form .checkout-button {
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    background-color: rosybrown;
+    color: #fefefe;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 12px 15px;
+    margin: 1rem auto;
+    cursor: pointer;
 }
 
 /* .shopping-cart .remove-item {
