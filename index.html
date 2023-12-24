@@ -147,69 +147,69 @@
     <div class="row">
          <template x-for="(item, index) in items" x-key="index">
             <div class="produk-card">
-            <div class="produk-icons">
-                <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
-                <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
-            </div>
-            <div class="produk-image">
-                <img :src="`img/${item.img}`" :alt="item.name">
-            </div>
-            <div class="produk-content">
-                <h3 x-text='item.name'></h3>
-                <div class="produk-stars">
-                    <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg
-                        width="24"
-                        height="24"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
+                <div class="produk-icons">
+                    <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
+                    <!-- <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a> -->
                 </div>
-                <div class="produk-price"><span x-text='rupiah(item.price)'></span></div>
-            </div>
+                <div class="produk-image">
+                    <img :src="`img/${item.img}`" :alt="item.name">
+                </div>
+                <div class="produk-content">
+                        <h3 x-text='item.name'></h3>
+                    <div class="produk-stars">
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <use href="img/feather-sprite.svg#star" />
+                        </svg>
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <use href="img/feather-sprite.svg#star" />
+                        </svg>
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <use href="img/feather-sprite.svg#star" />
+                        </svg>
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <use href="img/feather-sprite.svg#star" />
+                        </svg>
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <use href="img/feather-sprite.svg#star" />
+                        </svg>
+                    </div>
+                    <div class="produk-price"><span x-text='rupiah(item.price)'></span></div>
+                </div>
             </div>
         </template>
     </div>
@@ -268,7 +268,7 @@
 <!-- modal -->
 <div class="modal" id="item-detail-modal">
     <div class="modal-container">
-      <a href="#item-detail-modal" class="close-icon"><i class="fa-regular fa-rectangle-xmark fa-2xl" style="color: #010101;"></i></a>
+      <a href="#" class="close-icon"><i class="fa-regular fa-rectangle-xmark fa-2xl" style="color: #010101;"></i></a>
       <div class="modal-content">
         <img src="img/kolase love.png" alt="kolase">
         <div class="product-content">
@@ -280,14 +280,14 @@
             <i data-feather="star" class="star-full"></i>
             <i data-feather="star" class="star-full"></i>
             <i data-feather="star" class="star-full"></i>
-            <i data-feather="star"></i>
+            <i data-feather="star" class='star-full'></i>
           </div>
           <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          <a href="#shopping-cart-button"><i class='fa-solid fa-cart-shopping fa-2xl' style="color: #ffffff;"></i><span>add to cart</span></a>
+          <a href="#shopping-cart-button" ><i class='fa-solid fa-cart-shopping fa-2xl' style="color: #ffffff;"></i><span>add to cart</span></a>
         </div>
       </div>
     </div>
-  </div>
+</div>
 <!-- modal end -->
 
 

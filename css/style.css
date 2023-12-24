@@ -326,13 +326,12 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
-    border: 1px solid #eee;
+    border-radius: 1em 2em;
+    box-shadow: 1px 6px 6px rgba(255, 255, 255, .5);
     padding: 1rem;
 }
 
 .produk .produk-icons {
-    position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     gap: .1rem;
@@ -340,18 +339,17 @@ body {
 
 .produk .produk-icons a {
     position: absolute;
-    left: 90%;
-    right: 5%;
-    
-    width: 4rem;
-    height: 4rem;
-    color: #fff;
-    margin: .3rem;
-    border: 1px solid #222;
-    border-radius: 50%;
+    top: 79%;
+    left: 82%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    /* margin: .3rem; */
+    border: 1px solid #222;
+    border-radius: 50%;
 }
 
 .produk .produk-icons a:hover {
@@ -360,26 +358,34 @@ body {
     /* transform: scaleY(.5); */
 }
 
+.produk .produk-image {
+    padding: 1rem 0;
+    min-height: 34rem;
+    margin: .5rem 1rem;
+}
+
 .produk .produk-image img {
     position: absolute;
     top: 2rem;
     left: 8.3rem;
-    max-width: 300px;
-    max-height: 400px;
-}
-
-.produk .produk-image {
-    height: 21rem;
-    margin: .5rem 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .produk .produk-content h3 {
-    font-size: 2rem;
+    position: absolute;
+    top: 27rem;
+    left: 8rem;
+    font-size: 2.3rem;
 }
 
-.produk .produk-stars {
+.produk .produk-content .produk-stars {
+    position: absolute;
+    top: 29.5rem;
+    left: 7.6rem;
     color: var(--primary);
     padding: .3rem;
+    margin: 1rem 0;
 }
 
 .produk .produk-stars .star-full,
@@ -388,8 +394,11 @@ body {
 }
 
 .produk .produk-price {
+    position: absolute;
+    top: 32.5rem;
+    left: 7.9rem;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 /* .produk .produk-price span {
@@ -736,7 +745,7 @@ footer .credit a {
 }
 
 /* laptop */
-@media (max-width:834px) {
+@media (max-width:992px) {
     html {
         font-size: 63%;
     }
@@ -806,6 +815,35 @@ footer .credit a {
         font-size: 1.3rem;
     }
 
+    .produk .produk-image img {
+        left: 4rem;
+        width: 75%;
+        height: auto;
+    }
+
+    .produk .produk-content h3 {
+        margin: 1rem 0;
+        padding: 0;
+        left: 4rem;
+    }
+
+    .produk .produk-content .produk-stars {
+        left: 4rem;
+        margin: 1.8rem 0;
+        padding: 0;
+        
+    }
+
+    .produk .produk-price {
+        margin: 1rem 0;
+        padding: 0;
+        left: 4rem;
+    }
+
+    .produk .produk-icons a {
+        margin: 1rem;
+    }
+
     .kontak .row {
         flex-wrap: wrap;
     }
@@ -823,17 +861,42 @@ footer .credit a {
 
 /* mobile */
 
-@media (max-width:450px) {
+@media (max-width:567px) {
     html {
-        font-size: 55%;
-    }
-/* 
-    #hambuger-menu {
-        display: inline-block;
+        font-size: 60%;
     }
 
-    .produk .produk-image {
-        height: auto;
-        margin: auto;
+    /* #hambuger-menu {
+        display: inline-block;
     } */
+
+    .produk .produk-image img {
+        left: 8rem;
+        width: 65%;
+        height: 65%;
+        margin: 1.5rem;
+    }
+
+    .produk .produk-content h3 {
+        margin: 1rem;
+        left: 8rem;
+    }
+
+    .produk .produk-content .produk-stars {
+        left: 8rem;
+        margin: 1rem;
+        padding: 1rem 0;
+        
+    }
+
+    .produk .produk-price {
+        margin: 1rem;
+        padding: .5rem 0;
+        left: 8rem;
+    }
+
+    .produk .produk-icons a {
+        margin: 1rem;
+    }
+
 }
