@@ -90,7 +90,7 @@ body {
     color: var(--primary);
 }
 
-.hamburger-menu {
+#hamburger-menu {
     display: none;
 }
 
@@ -240,10 +240,10 @@ body {
 
 .about .row .about-img img {
     width: 100%;
-    -webkit-mask-image: url(../img/water-drop-3-svgrepo-com.svg);
+    /* -webkit-mask-image: url(../img/water-drop-3-svgrepo-com.svg);
     -webkit-mask-size: 50%;
     -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat; */
 
 }
 
@@ -508,7 +508,7 @@ body {
 
 .container-form h5 {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .container-form label {
@@ -519,6 +519,8 @@ body {
 }
 
 .container-form span {
+    font-weight: bold;
+    font-size: 1.2rem;
     text-align: start;
 }
 
@@ -543,6 +545,11 @@ body {
     cursor: pointer;
 }
 
+.container-form .checkout-button.disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
 /* .shopping-cart .remove-item {
     position: absolute;
     right: 1rem;
@@ -557,7 +564,7 @@ body {
 
 /* modal */
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -865,10 +872,6 @@ footer .credit a {
     html {
         font-size: 60%;
     }
-
-    /* #hambuger-menu {
-        display: inline-block;
-    } */
 
     .produk .produk-image img {
         left: 8rem;
