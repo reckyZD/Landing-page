@@ -73,7 +73,7 @@ checkoutButton.disabled = true;
 
 const form = document.querySelector('#checkoutForm');
 // ambil form atau form belum terisi semua
-form.addEventListener('keyup', function() {
+form.addEventListener('keyup', function () {
    for (let i = 0; i < form.elements.length; i++) {
         if (form.elements[i].value.length !== 0) {
             checkoutButton.classList.remove('disabled');
@@ -90,23 +90,25 @@ form.addEventListener('keyup', function() {
 // kirim data ketika tombol checkout di klik
 checkoutButton.addEventListener('click', function (e) {
     e.preventDefault();
+
     const formData = new FormData(form);
     const data = new URLSearchParams(formData);
     const objData = Object.fromEntries(data);  // konversi string menjadi objek
     const message  = formatMessage(objData);
-    window.open("http://wa.me/628151866855?text=" + encodeURIComponent(message));  // format pesan whatapps
+    
+    window.open("http://wa.me/628151866855?text=" + encodeURIComponent (message));  // format pesan whatapps
 });
 
 // format pesan whatsapps
-    const formatMessage = (Obj) => {
+    const formatMessage = (obj) => {
         return `Data customer
         Nama: ${obj.name}
         Email: ${obj.email}
         No HP: ${obj.phone}
 Data Pesanan:
-        ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.quantity)}) \n`)}
-TOTAL: ${rupiah(obj.total)} 
-Terima kasih.`;
+        ${JSON.parse(obj.items).map((item) => `${item.name} ${item.quantity} x ${rupiah(item.price)} = ${rupiah(item.total)} \n`)}
+Total: ${rupiah(obj.total)} 
+    Terima kasih.`;
     };
 
 
