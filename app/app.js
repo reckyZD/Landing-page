@@ -7,6 +7,14 @@ document.addEventListener('alpine:init', () => {
             { id: 4, name: 'printing', img: '4.jpg', price: '30000'},
         ],
     }));
+    Alpine.data('menu', () => ({
+        items: [
+            { id: 1, name: 'cetak foto', img: '1.jpg', price: '15000'},
+            { id: 2, name: 'stiker', img: '2.jpg', price: '15000'},
+            { id: 3, name: 'ppob', img: '3.jpg', price: '15000'},
+            { id: 4, name: 'printing', img: '4.jpg', price: '30000'},
+        ],
+    }));
     Alpine.store('cart', {
         items: [],
         total: 0,

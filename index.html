@@ -29,7 +29,7 @@
       <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl" style='color: #eeeeee;'></i></a>
       <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i>
     <span class='quantity-badge' x-show='$store.cart.quantity' x-text='$store.cart.quantity'></span></a>
-      <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl" style='color: #eeeeee;'></i></a>
+      <a href="#" class='hamburger-menu active' id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl" style='color: #eeeeee;'></i></a>
     </div>
     <!-- search -->
     <div class="search-form">
@@ -112,31 +112,19 @@
 <!-- about end -->
 
 <!-- menu -->
-<section class="menu" id="menu">
+<section class="menu" id="menu" x-data='menu'>
     <h2>Menu<span>kami</span></h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab perferendis illum voluptatibus</p>
 
     <div class="row">
+        <template x-for='(item, index) in items' x-key='index'>
         <div class="menu-card">
-            <img src="img/stiker.png" class='menu-card-img' alt="stiker">
-            <h3 class="menu-card-tittle">Stiker</h3>
-            <span class="menu-card-price">IDR 15.000</span>
+            <img :src="`img/${item.img}`" :alt="item.name" class='menu-card-img'>
+            <h3 class="menu-card-tittle" x-text='item.name'></h3>
+            <span class="menu-card-price" x-text='rupiah(item.price)'></span>
         </div>
-        <div class="menu-card">
-            <img src="img/kolase love.png" class='menu-card-img' alt="kolase">
-            <h3 class="menu-card-tittle">Cetak foto</h3>
-            <span class="menu-card-price">IDR 15.000</span>
-        </div>
-        <div class="menu-card">
-            <img src="img/sb.png" class='menu-card-img' alt="sb">
-            <h3 class="menu-card-tittle">PPOB</h3>
-            <span class="menu-card-price">IDR 15.000</span>
-        </div>
-        <div class="menu-card">
-            <img src="img/renata.png" class='menu-card-img' alt="stiker">
-            <h3 class="menu-card-tittle">Printing</h3>
-            <span class="menu-card-price">IDR 35.000</span>
-        </div>
+        </template>
+
     </div>
 </section>
 <!-- menu end -->

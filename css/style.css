@@ -305,8 +305,8 @@ body {
 }
 
 .menu .row .menu-card img {
-    border-radius: 25px 10px;
-    box-shadow:#fff;
+    border-radius: 1.5rem 1rem;
+    box-shadow: 1px 6px 6px rgba(255, 255, 255, .5);
     width: 80%;
 }
 
@@ -819,7 +819,7 @@ footer .credit a {
     }
 
     .menu p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .produk .produk-image img {
