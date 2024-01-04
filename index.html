@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src='app/app.js' async></script>
+    <script src='javascript/java.js' async></script>
 </head>
 <body>
 <!-- navbar -->
@@ -29,7 +29,7 @@
       <a href="#" id="search-button"><i class="fa-solid fa-magnifying-glass fa-2xl" style='color: #eeeeee;'></i></a>
       <a href="#" id="shopping-cart-button"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #eeeeee;"></i>
     <span class='quantity-badge' x-show='$store.cart.quantity' x-text='$store.cart.quantity'></span></a>
-      <a href="#" class='hamburger-menu active' id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl" style='color: #eeeeee;'></i></a>
+      <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars fa-2xl" style='color: #eeeeee;'></i></a>
     </div>
     <!-- search -->
     <div class="search-form">
@@ -138,8 +138,8 @@
          <template x-for="(item, index) in items" x-key="index">
             <div class="produk-card">
                 <div class="produk-icons">
-                    <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
-                    <!-- <a href="#item-detail-button" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a> -->
+                    <!-- <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a> -->
+                    <a href="item-detail-modal" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
                 </div>
                 <div class="produk-image">
                     <img :src="`img/${item.img}`" :alt="item.name">
@@ -284,7 +284,7 @@
     <script>
         feather.replace();
     </script>
-<script src='javascript/java.js'></script>
+        <script src='app/app.js'></script>
 <script src="https://kit.fontawesome.com/4fd0c502c7.js" crossorigin="anonymous"></script>
 </body>
 </html>

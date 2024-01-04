@@ -381,11 +381,15 @@ body {
 
 .produk .produk-content .produk-stars {
     position: absolute;
-    top: 29.5rem;
-    left: 7.6rem;
+    top: 29.6rem;
+    left: 7.5rem;
     color: var(--primary);
-    padding: .3rem;
+    padding: .4rem;
     margin: 1rem 0;
+}
+
+.star-full {
+    fill: var(--primary);
 }
 
 .produk .produk-stars .star-full,
@@ -395,7 +399,7 @@ body {
 
 .produk .produk-price {
     position: absolute;
-    top: 32.5rem;
+    top: 32.7rem;
     left: 7.9rem;
     font-weight: bold;
     font-size: 2rem;
