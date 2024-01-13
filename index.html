@@ -11,6 +11,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src='javascript/java.js' async></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
 <!-- navbar -->
@@ -138,8 +139,8 @@
          <template x-for="(item, index) in items" x-key="index">
             <div class="produk-card">
                 <div class="produk-icons">
-                    <!-- <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a> -->
-                    <a href="item-detail-modal" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="#" @click.prevent='$store.cart.add(item)'><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #ffffff;"></i></a>
+                    <!-- <a href="item-detail-modal" class='item-detail-button'><i class="fa-regular fa-eye fa-2xl" style="color: #ffffff;"></i></a> -->
                 </div>
                 <div class="produk-image">
                     <img :src="`img/${item.img}`" :alt="item.name">

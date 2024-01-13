@@ -753,6 +753,10 @@ footer .credit a {
     html {
         font-size: 75% ;
     }
+
+    #hambuger-menu {
+        display: inline-block;
+    }
 }
 
 /* laptop */
@@ -877,6 +881,11 @@ footer .credit a {
         font-size: 60%;
     }
 
+    #hambuger-menu {
+        display: inline-block;
+    }
+
+    
     .produk .produk-image img {
         left: 8rem;
         width: 65%;
